@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amar Al Fatah - Portfolio</title>
     <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="dist/css/hover.css">
     <style>
         /* Animation Styles */
         @keyframes fadeIn {
@@ -52,19 +53,24 @@
                         class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                         <ul class="block lg:flex">
                             <li class="group"><a href="#home"
-                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Beranda</a></li>
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition duration-300 ease-in-out">Beranda</a>
+                            </li>
                             <li class="group"><a href="#about"
-                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Tentang Saya</a>
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition duration-300 ease-in-out">Tentang
+                                    Saya</a>
                             </li>
                             <li class="group"><a href="#portfolio"
-                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition duration-300 ease-in-out">Portfolio</a>
                             </li>
                             <li class="group"><a href="#clients"
-                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Clients</a></li>
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition duration-300 ease-in-out">Clients</a>
+                            </li>
                             <li class="group"><a href="#blog"
-                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Blog</a></li>
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition duration-300 ease-in-out">Blog</a>
+                            </li>
                             <li class="group"><a href="#contact"
-                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a></li>
+                                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary transition duration-300 ease-in-out">Contact</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -74,7 +80,7 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 relative">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
@@ -88,24 +94,36 @@
                             class="text-dark font-bold">Dunia pemrograman</span>.
                     </p>
                     <a href="#contact"
-                        class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Hubungi
+                        class="hvr-buzz text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Hubungi
                         Kami</a>
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
-                    <div id="imgGroup" class="relative mt-10 lg:mt-9 lg:right-0 animated fadeIn rounded-full">
-                        <img src="dist/img/legend-bg.png" alt="Amar Al Fatah" class="max-w-full mx-auto lg:w-[400px]">
-                        <!-- <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-150 lg:h-96 lg:top-20">
+                    <div id="imgGroup" class="relative mt-10 lg:mt-9 lg:right-0 animated fadeIn flex">
+                        <img src="dist/img/legend-bg.png" alt="Amar Al Fatah"
+                            class="max-w-full mx-auto lg:w-[400px] hvr-rotate">
+                        <!-- Modal -->
+                        <div class="absolute bottom-0 left-0 z-50">
+                            <div class="bg-white p-4 shadow-lg rounded-lg">
+                                <!-- Your modal content goes here -->
+                                <h3 class="text-xl font-semibold mb-2">Pertanyaan</h3>
+                                <p class="text-gray-700">Apakah saya tampan?</p>
+                            </div>
+                        </div>
+                        <!-- End of Modal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- didalam img group -->
+    <!-- <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-150 lg:h-96 lg:top-20">
                             <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                                 <path fill="#14b8a6"
                                     d="M55.5,-59.5C65.8,-45.1,64,-22.6,59.4,-4.6C54.8,13.4,47.4,26.7,37.1,35.9C26.7,45.1,13.4,50,-2.4,52.3C-18.1,54.7,-36.1,54.5,-43.1,45.3C-50,36.1,-45.8,18.1,-44.4,1.4C-43.1,-15.3,-44.5,-30.6,-37.5,-44.9C-30.6,-59.3,-15.3,-72.7,3.6,-76.3C22.6,-80,45.1,-73.8,55.5,-59.5Z"
                                     transform="translate(100 100) scale(0.8)" />
                             </svg>
                         </span> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
@@ -114,16 +132,20 @@
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Pengembang Front-End yang Passionate!</h2>
-                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Saya seorang pengembang front-end yang bersemangat menciptakan pengalaman pengguna yang luar biasa dan antarmuka web yang menarik. 
-                        Dengan keahlian dalam HTML, CSS, JavaScript dan PHP, saya berdedikasi untuk membangun situs web yang responsif, efisien, dan indah secara visual.</p>
+                    <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Pengembang Front-End yang
+                        Passionate!</h2>
+                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Saya adalah pengembang front-end
+                        yang antusias dengan 1+ tahun pengalaman. Sekarang berkuliah di Universitas Ahmad Dahlan
+                        Yogyakarta jurusan Informatika. Keahlian saya meliputi HTML, CSS, JavaScript, Laravel dan Kotlin
+                        (Mobile). Saya
+                        berdedikasi untuk membangun aplikasi web yang responsif, efisien, dan mudah digunakan.</p>
                 </div>
 
                 <div class="w-full px-4 lg:w-1/2">
                     <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Mari Berteman</h3>
                     <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Saya selalu ingin terhubung dengan
-                        orang lain yang memiliki minat yang sama terhadap pengembangan web. Jangan ragu untuk
-                        menghubungi saya melalui</p>
+                        orang lain yang memiliki minat yang sama terhadap pemrograman. Jangan ragu untuk
+                        menghubungi saya melalui :</p>
                     <div class="flex items-center">
                         <!-- Github -->
                         <a href="https://github.com/amaralfatah" target="_blank"
@@ -200,38 +222,40 @@
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Project Terbaru</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Berikut adalah beberapa proyek terbaru yang saya kerjakan<br>Klik pada gambar untuk melihat detailnya</p>
+                    <p class="font-medium text-md text-secondary md:text-lg">Berikut adalah beberapa proyek terbaru yang
+                        saya kerjakan<br>Klik pada gambar untuk melihat detailnya</p>
                 </div>
 
                 <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
                     <div class="mb-12 p-4 md:w-1/2">
-                        <div class="rounded-md shadow-md overflow-hidden">
-                            <img src="https://source.unsplash.com/1920x1080" alt="Nama Project" width="full">
+                        <div class="rounded-md shadow-md overflow-hidden hvr-grow">
+                            <img src="dist/img/trebez.png" alt="Trebez App" width="full">
                         </div>
-                        <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page Amar Al Fatah</h3>
-                        <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Vel quidem neque rerum distinctio suscipit dolorem?</p>
+                        <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Trebez App: Mengemudi Aman dan Nyaman</h3>
+                        <p class="font-medium text-base text-secondary">Trebez App adalah aplikasi edukasi keselamatan
+                            berkendara yang membantu Anda menjadi pengemudi yang lebih bertanggung jawab dan terampil.
+                        </p>
                     </div>
                     <div class="mb-12 p-4 md:w-1/2">
-                        <div class="rounded-md shadow-md overflow-hidden">
-                            <img src="https://source.unsplash.com/1920x1080" alt="Nama Project" width="full">
+                        <div class="rounded-md shadow-md overflow-hidden hvr-grow">
+                            <img src="dist/img/freshcheck.png" alt="Fresh Check App" width="full">
                         </div>
-                        <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page Amar Al Fatah</h3>
-                        <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Vel quidem neque rerum distinctio suscipit dolorem?</p>
+                        <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Fresh Check App: Belanja Cerdas, Makan
+                            Sehat</h3>
+                        <p class="font-medium text-base text-secondary">Hindari membeli buah & sayur busuk! Fresh Check
+                            App menggunakan AI untuk menilai kesegaran bahan makanan Anda secara instan.
+                        </p>
                     </div>
                     <div class="mb-12 p-4 md:w-1/2">
-                        <div class="rounded-md shadow-md overflow-hidden">
-                            <img src="https://source.unsplash.com/1920x1080" alt="Nama Project" width="full">
+                        <div class="rounded-md shadow-md overflow-hidden hvr-grow">
+                            <img src="dist/img/dexshop.png" alt="Dexshop App" width="full">
                         </div>
-                        <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page Amar Al Fatah</h3>
-                        <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Vel quidem neque rerum distinctio suscipit dolorem?</p>
+                        <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Dexshop App : Manajemen Toko Baju Cerdas</h3>
+                        <p class="font-medium text-base text-secondary">Lakukan manajemen inventaris toko baju Anda dengan Dexshop App. Hemat waktu, optimalkan stok, pengingat pesanan dan tingkatkan penjualan dengan solusi yang inovatif dan mudah digunakan.</p>
                     </div>
                     <div class="mb-12 p-4 md:w-1/2">
-                        <div class="rounded-md shadow-md overflow-hidden">
-                            <img src="https://dummyimage.com/1920x1080&text=amaralfatah" alt="Nama Project"
-                                width="full">
+                        <div class="rounded-md shadow-md overflow-hidden hvr-grow">
+                            <img src="https://source.unsplash.com/1920x1080" alt="Nama Project" width="full">
                         </div>
                         <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Landing Page Amar Al Fatah</h3>
                         <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur,
@@ -287,7 +311,8 @@
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Tulisan Terkini</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Di bagian ini, saya akan berbagi tulisan terbaru tentang pengembangan web dan hal-hal terkait lainnya.</p>
+                    <p class="font-medium text-md text-secondary md:text-lg">Di bagian ini, saya akan berbagi tulisan
+                        terbaru tentang pengembangan web dan hal-hal terkait lainnya.</p>
                 </div>
                 <div class="flex flex-wrap">
                     <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
